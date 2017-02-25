@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+    <head>
+        <title>Learn and Understand AngularJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+        
+         <link rel="stylesheet" href="bootstrap-3/css/bootstrap.min.css">
+  
+        <script src="angular.min.js"></script>
+        <script src="2app.js"></script>
+        <script src="angular-messages-min.js"></script>
+        <script src="//code.angularjs.org/1.6.1/angular-resource.min.js"></script>
+
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">AngularJS</a>
+				</div>
+ n 
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container" ng-controller="MainController">
+
+            <div >
+            
+                <h1>Hello world!</h1>
+                
+            </div>
+            
+        <form name="myForm">
+          <label>
+            Enter text:
+          <input type="email" ng-model="field" name="myField" required maxlength="15" />
+          </label>
+          <div ng-messages="myForm.myField.$error" role="alert">
+            <div ng-message="required">Please enter a value for this field.</div>
+            <div ng-message="email">This field must be a valid email address.</div>
+            <div ng-message="maxlength">This field can be at most 15 characters long.</div>
+          </div>
+         </form>
+            
+		</div>
+
+    </body>
+</html>

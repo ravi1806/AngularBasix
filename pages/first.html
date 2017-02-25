@@ -1,0 +1,21 @@
+<!--<input type="text" ng-model='name'>-->
+
+
+<label for="">Search</label>
+<input type="text" value="Yadav">
+
+<h3>Search Results</h3>
+
+<div class="list-group">
+<!-- the below code will make scope of directive to take data from scope of controller refer 11app.js -->
+  <search-result person-name="{{person.name}}" person-address = "{{person.address}}"></search-result>
+  <search-result person-object="person"></search-result>
+  <search-result></search-result>
+  <div search-result></div> 
+<!--  if replace is false then div will be there, else it will be replaced by the contents of template, here an attribute of search-result will be added either to div or a depending on the value of replace(true or false) -->
+  <search-result></search-result>
+  <div class="search-result"></div>
+<!--directive: search-result  -->
+</div>
+
+
