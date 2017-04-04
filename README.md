@@ -134,14 +134,15 @@
                   }).error(function(data,status){
                         console.log(data);  
                       });
-    ```
+```
 
 ## Custom Directives
 
-* It is defined in the app.js but used in other files. eg. it is searchResults in app.js but <search-results> </search-results> in html file. We need to use a scope property in the app.js directive as its not good to use the $scope of controllers from directives as it wil lead to some unwanted change of data. The scope in the directive of app.js are assigned values of $scope of controllers inside the html files where the directives are called. Eg. `<search-result>person-name="{{person.name}}"<search-result>` and so on. 
+* It is defined in the app.js but used in other files. eg. it is searchResults in app.js but `<search-results> </search-results>` in html file. We need to use a scope property in the app.js directive as its not good to use the $scope of controllers from directives as it wil lead to some unwanted change of data. The scope in the directive of app.js are assigned values of $scope of controllers inside the html files where the directives are called. Eg. <search-result>person-name="{{person.name}}"<search-result> and so on. 
 
 * It returns an object.
 * Example of a custom directive
+
 ```js
   myApp.directive('searchResult', function() {
     return {
