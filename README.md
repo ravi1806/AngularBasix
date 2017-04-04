@@ -100,6 +100,7 @@
 
 * **ngMessages** can be used for form validation.
 * **ngResource** can be used to grab data from the internet. 
+* **ngRoute** for routing
 
 ## Common Directives
 * ng-show, ng-hide, ng-click, ng-if(removes completely from DOM so preferrably avoided) are some of the common directives.
@@ -137,8 +138,10 @@
 
 ## Custom Directives
 
-*It returns an object.
-*Example of a custom directive
+* It is defined in the app.js but used in other files. eg. it is searchResults in app.js but <search-results> </search-results> in html file. We need to use a scope property in the app.js directive as its not good to use the $scope of controllers from directives as it wil lead to some unwanted change of data. The scope in the directive of app.js are assigned values of $scope of controllers inside the html files where the directives are called. Eg. `<search-result>person-name="{{person.name}}"<search-result>` and so on. 
+
+* It returns an object.
+* Example of a custom directive
 ```js
   myApp.directive('searchResult', function() {
     return {
