@@ -4,7 +4,7 @@
 
 * Add a directive ng-app to the html tag.
 * Add the scripts for angularjs and the dependencies.
-* Create a div with directive ng-view where view will be rendered and ng-controller with its controller.
+* Create a div with directive ng-view where view will be rendered OR ng-controller with its controller.
 
 
 ## App.js Boilerplate
@@ -74,10 +74,12 @@
     ```
 ## Services
 
+* Services are singletons(one and only copy of the pbject). So if you modify it in an a controller it will be modified for all. We can use this property to change data over multiple pages.
 * The services are inbuilt as well as user built. Some examples of the inbuilt services are -> 
   * $filter eg. `$scope.formattedName = $filter('uppercase')($scope.name);`
   * $log eg. `$log.log` `$log.info` `$log.warn` `$log.error` `$log.debug`
   * $timeout for timeouts.
+  * $location for $location.path() which gives the path after the #! in the url.
   * you need to pass these as parameters wherever you want to use them.
 
 * Basic user built service example 
@@ -135,6 +137,7 @@
 
 ## Custom Directives
 
+*It returns an object.
 *Example of a custom directive
 ```js
   myApp.directive('searchResult', function() {
